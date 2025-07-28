@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="icon" href="%PUBLIC_URL%/favicon.ico" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="theme-color" content="#000000" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta</p>
+<p class="p1"><span class="Apple-converted-space">      </span>name="description"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content="基于AI的智能图表生成助手，支持Excel数据分析和多种图表类型"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--</p>
+<p class="p1"><span class="Apple-converted-space">      </span>manifest.json provides metadata used when your web app is installed on a</p>
+<p class="p1"><span class="Apple-converted-space">      </span>user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="manifest" href="%PUBLIC_URL%/manifest.json" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Notice the use of %PUBLIC_URL% in the tags above.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>It will be replaced with the URL of the `public` folder during the build.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Only files inside the `public` folder can be referenced from the HTML.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will</p>
+<p class="p1"><span class="Apple-converted-space">      </span>work correctly both with client-side routing and a non-root public URL.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Learn how to configure a non-root public URL by running `npm run build`.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;智能图表助手 - AI Chart Assistant&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 添加一些基础样式 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>-webkit-font-smoothing: antialiased;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>-moz-osx-font-smoothing: grayscale;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>#root {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>/* 加载动画 */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.app-loading {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background-color: #f0f2f5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.loading-spinner {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border: 3px solid #f3f3f3;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-top: 3px solid #1890ff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: spin 1s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>@keyframes spin {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0% { transform: rotate(0deg); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>100% { transform: rotate(360deg); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.loading-text {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>/* 防止页面闪烁 */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hidden {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none !important;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;noscript&gt;您需要启用 JavaScript 来运行此应用。&lt;/noscript&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 应用加载前的占位内容 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="app-loading" id="app-loading"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="loading-spinner"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="loading-text"&gt;智能图表助手加载中...&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--</p>
+<p class="p1"><span class="Apple-converted-space">      </span>This HTML file is a template.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>If you open it directly in the browser, you will see an empty page.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>You can add webfonts, meta tags, or analytics to this file.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>The build step will place the bundled scripts into the &lt;body&gt; tag.</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>To begin the development, run `npm start` or `yarn start`.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>To create a production bundle, use `npm run build` or `yarn build`.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// 当React应用加载完成后，隐藏加载动画</p>
+<p class="p1"><span class="Apple-converted-space">      </span>window.addEventListener('load', function() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(function() {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const loadingElement = document.getElementById('app-loading');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (loadingElement) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>loadingElement.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, 100);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
